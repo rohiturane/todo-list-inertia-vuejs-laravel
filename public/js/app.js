@@ -5028,6 +5028,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["users"],
   data: function data() {
@@ -27603,13 +27604,17 @@ var render = function() {
               }
             },
             _vm._l(_vm.users, function(option) {
-              return _c("option", { domProps: { value: option.id } }, [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(option.name) +
-                    "\n                    "
-                )
-              ])
+              return _c(
+                "option",
+                { key: option.id, domProps: { value: option.id } },
+                [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(option.name) +
+                      "\n                    "
+                  )
+                ]
+              )
             }),
             0
           ),
@@ -27639,7 +27644,7 @@ var render = function() {
             "tbody",
             { staticClass: "bg-white divide-y divide-gray-200" },
             _vm._l(_vm.todolist, function(row) {
-              return _c("tr", [
+              return _c("tr", { key: row.id }, [
                 _c("td", { staticClass: "px-6 py-4 whitespace-nowrap" }, [
                   _c("input", {
                     directives: [
@@ -27749,7 +27754,7 @@ var render = function() {
           "tbody",
           { staticClass: "bg-white divide-y divide-gray-200" },
           _vm._l(_vm.assignedUsers, function(user) {
-            return _c("tr", [
+            return _c("tr", { key: user.id }, [
               _c(
                 "td",
                 {

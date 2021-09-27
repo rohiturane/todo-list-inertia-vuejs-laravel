@@ -28,6 +28,7 @@
                         <option
                             v-for="option in users"
                             v-bind:value="option.id"
+                            :key="option.id"
                         >
                             {{ option.name }}
                         </option>
@@ -61,7 +62,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr v-for="row in todolist">
+                        <tr v-for="row in todolist" :key="row.id">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <input
                                     type="checkbox"
@@ -117,7 +118,7 @@
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-              <tr v-for="user in assignedUsers">
+              <tr v-for="user in assignedUsers" :key="user.id">
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">{{user.name}}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">{{user.email}}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">{{user.todos.length}}</td>
